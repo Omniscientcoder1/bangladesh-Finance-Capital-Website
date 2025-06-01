@@ -1,0 +1,25 @@
+.card {
+  background-color: #ffffff;
+  border-left: 5px solid #002244;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #002244;
+  font-weight: 600;
+}
+
+.summary {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 13px;
+  color: #888;
+}
