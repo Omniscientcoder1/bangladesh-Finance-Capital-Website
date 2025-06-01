@@ -2,6 +2,7 @@ import React from "react";
 
 import Banner from "../components/Banner";
 import PageContent from "../components/PageContent";
+import HeroBanner from "@/components/home/HeroBanner";
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     <>
      
       <Banner />
+      <HeroBanner />
       <PageContent>
         <h1>Empowering Financial Growth</h1>
         <p>

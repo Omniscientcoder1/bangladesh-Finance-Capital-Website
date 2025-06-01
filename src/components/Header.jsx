@@ -1,152 +1,199 @@
-// ✅ src/components/Header.jsx
 import React, { useState } from "react";
 import styles from "../styles/components/header.module.css";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Toolbar,
   IconButton,
-  Typography,
-  Menu,
-  MenuItem,
-  Button,
   Drawer,
   List,
   ListItem,
   ListItemText,
   Box,
+  useMediaQuery,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useTheme } from "@mui/material/styles";
 
 const menuItems = [
   {
     label: "ABOUT US",
-    links: [
-      { name: "Company Overview", path: "/about" },
-      { name: "Leadership", path: "/team" },
+    subItems: [
+      { name: "OUR STORY", path: "/about" },
+      { name: "OUR TEAM", path: "/team" },
+      { name: "MISSION AND VISION", path: "/mission" },
+      { name: "BOARD OF DIRECTORS", path: "/directors" },
+      { name: "LEADERSHIP", path: "/leadership" },
     ],
   },
   {
     label: "SERVICES",
-    links: [
-      { name: "Portfolio Management", path: "/services" },
-      { name: "Issue Management", path: "/services" },
+    subItems: [
+      {
+        name: "PORTFOLIO MANAGEMENT",
+        path: "/services/portfolio",
+        subItems: [
+          { name: "DISCRETIONARY", path: "/services/portfolio/discretionary" },
+          { name: "NON-DISCRETIONARY", path: "/services/portfolio/non-discretionary" },
+        ],
+      },
+      {
+        name: "INVESTMENT BANKING",
+        path: "/services/banking",
+        subItems: [
+          { name: "CORPORATE ADVISORY", path: "/services/banking/ipo" },
+          { name: "DEBT/EQUITY SOLUTIONS", path: "/services/banking/ma" },
+          { name: "PUBLIC/RIGHTS OFFERINGS", path: "/services/banking/ma" },
+          { name: "TRUSTEESHIP SERVICES", path: "/services/banking/ma" },
+          { name: "MERGER & ACQUISITION SERVICES", path: "/services/banking/ma" },
+        ],
+      },
+      
     ],
   },
   {
     label: "RESEARCH",
-    links: [
-      { name: "Reports", path: "/research/reports" },
-      { name: "Analysis", path: "/research/analysis" },
+    subItems: [
+      { name: "WEEKLY UPDATE", path: "/research/reports" },
+      { name: "MONTHLY UPDATE", path: "/research/analysis" },
+      { name: "INDUSTRY UPDATE", path: "/research/analysis" },
     ],
   },
-  {
+    {
     label: "NEWS",
-    links: [
-      { name: "Press Releases", path: "/news" },
-      { name: "Insights", path: "/news/insights" },
+    subItems: [
+      { name: "News & PR Coverage", path: "/research/reports" },
+      { name: "Interviews", path: "/research/analysis" },
+      { name: "Market Insights", path: "/research/analysis" },
+      { name: "Thought Leadership", path: "/research/analysis" },
+      { name: "Media", path: "/research/analysis" },
+      { name: "Our Achievements", path: "/research/analysis" },
     ],
   },
   {
     label: "CAREER",
-    links: [
-      { name: "Jobs", path: "/career" },
-      { name: "Internships", path: "/career/internships" },
+    subItems: [
+      { name: "Current Openings", path: "/research/reports" },
+      { name: "Why Work with Us?", path: "/research/analysis" },
+      { name: "Employee Testimonials", path: "/research/analysis" },
+      { name: "Life at BFCL", path: "/research/analysis" },
     ],
   },
-  {
-    label: "CONTACT",
-    links: [
-      { name: "Support", path: "/contact" },
-      { name: "Location", path: "/contact/location" },
+    {
+    label: "CONTACT US",
+    subItems: [
+      { name: "Branch Locations", path: "/research/reports" },
+      { name: "Contact Form", path: "/research/analysis" },
+      { name: "Customer Service", path: "/research/analysis" },
+    ],
+  },
+      {
+    label: "QUICK LINKS",
+    subItems: [
+      { name: "BSEC", path: "/research/reports" },
+      { name: "RJSC", path: "/research/analysis" },
+      { name: "Bangladesh Bank", path: "/research/analysis" },
+      { name: "NBR", path: "/research/analysis" },
+      { name: "CDBL", path: "/research/analysis" },
+      { name: "Ministry of Commerce", path: "/research/analysis" },
+      { name: "Ministry of Finance", path: "/research/analysis" },
+      { name: "Bangladesh Finance", path: "/research/analysis" },
+      { name: "Bangladesh Finance Securities", path: "/research/analysis" },
+      
     ],
   },
 ];
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [openMenu, setOpenMenu] = useState(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleMenuOpen = (event, label) => {
-    setAnchorEl(event.currentTarget);
-    setOpenMenu(label);
-  };
+  const toggleDrawer = () => setMobileOpen(!mobileOpen);
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    setOpenMenu(null);
-  };
-
-  const toggleDrawer = () => {
-    setMobileOpen(!mobileOpen);
+  const handleSubMenuHover = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const submenu = event.currentTarget.querySelector(`.${styles.dropdownRight}`);
+    if (submenu) {
+      if (viewportWidth - rect.right < 220) {
+        submenu.classList.add(styles.openLeft);
+      } else {
+        submenu.classList.remove(styles.openLeft);
+      }
+    }
   };
 
   return (
     <AppBar position="static" className={styles.appbar}>
       <Toolbar className={styles.toolbar}>
-        <Box className={styles.logo} component="a" href="/">
-          <img src="/images/logo.png" alt="Logo" height="40" style={{ marginRight: 8 }} />
-          <Typography variant="h6">Bangladesh Finance Capital</Typography>
-        </Box>
+        <a href="/" className={styles.logo}>
+          <img src="/images/logo.png" alt="Logo" height="40" />
+        </a>
 
-        <Box className={styles.desktopMenu}>
-          {menuItems.map((menu) => (
-            <Box key={menu.label}>
-              <Button
-                color="inherit"
-                endIcon={<ArrowDropDownIcon />}
-                onClick={(e) => handleMenuOpen(e, menu.label)}
-              >
-                {menu.label}
-              </Button>
-              <Menu
-                anchorEl={anchorEl}
-                open={openMenu === menu.label}
-                onClose={handleMenuClose}
-              >
-                {menu.links.map((link, index) => (
-                  <MenuItem key={index} component="a" href={link.path} onClick={handleMenuClose}>
-                    {link.name}
-                  </MenuItem>
+        {!isMobile && (
+          <nav className={styles.desktopNav}>
+            <ul className={styles.menu}>
+              {menuItems.map((item) => (
+                <li key={item.label}>
+                  <a href="#">{item.label}</a>
+                  {item.subItems && (
+                    <ul className={styles.dropdown}>
+                      {item.subItems.map((sub) => (
+                        <li key={sub.name} onMouseEnter={handleSubMenuHover}>
+                          <a href={sub.path}>{sub.name}</a>
+                          {sub.subItems && (
+                            <ul className={`${styles.dropdownRight}`}>
+                              {sub.subItems.map((deep) => (
+                                <li key={deep.name}>
+                                  <a href={deep.path}>{deep.name}</a>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        {isMobile && (
+          <>
+            <IconButton onClick={toggleDrawer} color="inherit">
+              <MenuIcon />
+            </IconButton>
+            <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
+              <List sx={{ width: 250 }}>
+                {menuItems.map((item) => (
+                  <React.Fragment key={item.label}>
+                    <ListItem><strong>{item.label}</strong></ListItem>
+                    {item.subItems?.map((sub) => (
+                      <React.Fragment key={sub.name}>
+                        <ListItem button component="a" href={sub.path} onClick={toggleDrawer}>
+                          <ListItemText inset primary={sub.name} />
+                        </ListItem>
+                        {sub.subItems?.map((deep) => (
+                          <ListItem
+                            button
+                            component="a"
+                            href={deep.path}
+                            key={deep.name}
+                            onClick={toggleDrawer}
+                          >
+                            <ListItemText inset primary={`— ${deep.name}`} />
+                          </ListItem>
+                        ))}
+                      </React.Fragment>
+                    ))}
+                  </React.Fragment>
                 ))}
-              </Menu>
-            </Box>
-          ))}
-        </Box>
-
-        <IconButton
-          className={styles.mobileMenuIcon}
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-          onClick={toggleDrawer}
-        >
-          <MenuIcon />
-        </IconButton>
-
-        <Drawer anchor="right" open={mobileOpen} onClose={toggleDrawer}>
-          <List sx={{ width: 250 }}>
-            {menuItems.map((menu) => (
-              <Box key={menu.label}>
-                <ListItem>
-                  <strong>{menu.label}</strong>
-                </ListItem>
-                {menu.links.map((link, index) => (
-                  <ListItem
-                    button
-                    component="a"
-                    href={link.path}
-                    key={index}
-                    onClick={toggleDrawer}
-                  >
-                    <ListItemText inset primary={link.name} />
-                  </ListItem>
-                ))}
-              </Box>
-            ))}
-          </List>
-        </Drawer>
+              </List>
+            </Drawer>
+          </>
+        )}
       </Toolbar>
     </AppBar>
   );

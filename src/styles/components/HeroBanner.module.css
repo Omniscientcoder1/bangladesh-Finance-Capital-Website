@@ -1,0 +1,22 @@
+/* src/components/home/HeroBanner.css */
+.hero-section {
+  background: url('/images/hero-banner.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-subheading {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
