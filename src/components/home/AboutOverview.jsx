@@ -1,14 +1,14 @@
+// src/components/home/AboutOverview.jsx
 import React from "react";
-import styles from "./AboutOverview.module.scss";
+import styles from "@/styles/components/AboutOverview.module.css";
 
 const AboutOverview = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2>About Us</h2>
-        <p>
-          Bangladesh Finance Capital offers a wide range of financial services. Our mission is to
-          empower investors and build a sustainable future.
+        <h2 className={styles.heading}>About Us</h2>
+        <p className={styles.text}>
+          This is the AboutOverview section. Replace with real content.
         </p>
       </div>
     </section>

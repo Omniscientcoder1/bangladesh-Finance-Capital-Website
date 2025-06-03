@@ -1,0 +1,20 @@
+/* CTASection.module.css */
+.section {
+  padding: 60px 20px;
+  background-color: #002244;
+  color: white;
+  text-align: center;
+}
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffcc00;
+  color: #002244;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+}

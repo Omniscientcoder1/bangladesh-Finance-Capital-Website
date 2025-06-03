@@ -1,13 +1,13 @@
-// src/components/home/HeroBanner.jsx
 import React from "react";
-import styles from "../../styles/components/HeroBanner.module.css";
+import styles from "@/styles/components/HeroBanner.module.css";
+import data from "@/data/heroBannerData.js";
 
 const HeroBanner = () => {
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <h1 className={styles.heading}>Welcome to Bangladesh Finance Capital</h1>
-        <p className={styles.subheading}>Your trusted partner in investment and portfolio management</p>
+    <section className={styles.banner}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>{data.title}</h1>
+        <p className={styles.subtitle}>{data.subtitle}</p>
       </div>
     </section>
   );

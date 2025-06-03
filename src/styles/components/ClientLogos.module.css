@@ -1,0 +1,24 @@
+.section {
+  padding: 40px 20px;
+  background: #f5f8fb;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.logo:hover {
+  opacity: 1;
+}

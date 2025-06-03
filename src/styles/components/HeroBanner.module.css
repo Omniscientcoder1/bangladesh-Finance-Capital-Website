@@ -1,6 +1,6 @@
 /* src/components/home/HeroBanner.css */
 .hero-section {
-  background: url('/images/hero-banner.jpg') center/cover no-repeat;
+  background: url('/images/banner.jpg') center/cover no-repeat;
   color: white;
   padding: 100px 20px;
   text-align: center;

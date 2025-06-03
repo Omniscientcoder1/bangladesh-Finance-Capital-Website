@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* Brand Color Tokens */
+:root {
+  --color-active: #003366;   /* Navy Blue - Trustworthy, Active */
+  --color-inactive: #9aa0a6; /* Neutral Gray - Muted/Inactive */
+  --color-passive: #e6f0ff;  /* Soft Blue - Background/Hover/Passive */
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f4f6f8;
@@ -24,6 +31,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 html, body {
   height: 100%;
   margin: 0;

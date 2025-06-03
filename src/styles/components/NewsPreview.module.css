@@ -1,0 +1,25 @@
+/* NewsPreview.module.css */
+.section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.heading {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+.newsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+.newsList li {
+  margin: 10px 0;
+  font-weight: 500;
+  color: #004080;
+}

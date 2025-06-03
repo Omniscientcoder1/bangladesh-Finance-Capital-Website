@@ -15,7 +15,8 @@
   align-items: center;
   color: white;
   height: 100px;
-  width:100px;
+  width: 200px;
+  padding-left: 20px;
 }
 
 .desktopNav {

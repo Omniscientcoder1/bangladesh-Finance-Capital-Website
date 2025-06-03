@@ -61,29 +61,29 @@ const menuItems = [
     {
     label: "NEWS",
     subItems: [
-      { name: "News & PR Coverage", path: "/research/reports" },
-      { name: "Interviews", path: "/research/analysis" },
-      { name: "Market Insights", path: "/research/analysis" },
-      { name: "Thought Leadership", path: "/research/analysis" },
-      { name: "Media", path: "/research/analysis" },
-      { name: "Our Achievements", path: "/research/analysis" },
+      { name: "NEWS & PR COVERAGE", path: "/research/reports" },
+      { name: "INTERVIEWS", path: "/research/analysis" },
+      { name: "MARKET INSIGHTS", path: "/research/analysis" },
+      { name: "THOUGHT LEADERSHIP", path: "/research/analysis" },
+      { name: "MEDIA", path: "/research/analysis" },
+      { name: "OUR ACHIEVEMENTS", path: "/research/analysis" },
     ],
   },
   {
     label: "CAREER",
     subItems: [
-      { name: "Current Openings", path: "/research/reports" },
-      { name: "Why Work with Us?", path: "/research/analysis" },
-      { name: "Employee Testimonials", path: "/research/analysis" },
-      { name: "Life at BFCL", path: "/research/analysis" },
+      { name: "CURRENT OPENINGS", path: "/research/reports" },
+      { name: "WHY WORK WITH US?", path: "/research/analysis" },
+      { name: "EMPLOYEE TESTIMONIALS", path: "/research/analysis" },
+      { name: "LIFE AT BFCL", path: "/research/analysis" },
     ],
   },
     {
     label: "CONTACT US",
     subItems: [
-      { name: "Branch Locations", path: "/research/reports" },
-      { name: "Contact Form", path: "/research/analysis" },
-      { name: "Customer Service", path: "/research/analysis" },
+      { name: "BRANCH LOCATIONS", path: "/research/reports" },
+      { name: "CONTACT FORM", path: "/research/analysis" },
+      { name: "CUSTOMER SERVICE", path: "/research/analysis" },
     ],
   },
       {
@@ -94,11 +94,11 @@ const menuItems = [
       { name: "Bangladesh Bank", path: "/research/analysis" },
       { name: "NBR", path: "/research/analysis" },
       { name: "CDBL", path: "/research/analysis" },
-      { name: "Ministry of Commerce", path: "/research/analysis" },
-      { name: "Ministry of Finance", path: "/research/analysis" },
-      { name: "Bangladesh Finance", path: "/research/analysis" },
-      { name: "Bangladesh Finance Securities", path: "/research/analysis" },
-      
+      { name: "MINISTRY OF COMMERCE", path: "/research/analysis" },
+      { name: "MINISTRY OF FINANCE", path: "/research/analysis" },
+      { name: "BANGLADESH FINANCE", path: "/research/analysis" },
+      { name: "BANGLADESH FINANCE SECURITIES", path: "/research/analysis" },
+
     ],
   },
 ];
@@ -127,7 +127,7 @@ const Header = () => {
     <AppBar position="static" className={styles.appbar}>
       <Toolbar className={styles.toolbar}>
         <a href="/" className={styles.logo}>
-          <img src="/images/logo.png" alt="Logo" height="40" />
+          <img src="/images/logo_cropped.png" alt="Logo" />
         </a>
 
         {!isMobile && (
