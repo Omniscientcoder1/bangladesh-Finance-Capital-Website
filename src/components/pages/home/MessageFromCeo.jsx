@@ -25,7 +25,7 @@ const MessageFromCeo = () => {
           </Typography>
         </Box>
 
-        {/* Message Below */}
+        {/* Message below */}
         <Box>
           <Typography
             variant="h5"

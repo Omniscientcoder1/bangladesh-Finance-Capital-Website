@@ -1,26 +1,3 @@
-// import React from "react";
-// import styles from "@/styles/components/StatsCounter.module.css";
-// import data from "@/data/statsCounterData.js";
-
-// const StatsCounter = () => {
-//   return (
-//     <section className={styles.section}>
-//       <div className={styles.container}>
-//         <h2 className={styles.heading}>{data.title}</h2>
-//         <div className={styles.stats}>
-//           {data.stats.map((stat, index) => (
-//             <div key={index} className={styles.stat}>
-//               <strong>{stat.value}</strong>
-//               <p>{stat.label}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default StatsCounter;
 import React from "react";
 import { Container, Typography, Grid, Box } from "@mui/material";
 import data from "@/data/statsCounterData.js";

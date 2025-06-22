@@ -2,15 +2,15 @@ import React from "react";
 
 import Banner from "../components/Banner";
 import PageContent from "../components/PageContent";
-import HeroBanner from "@/components/home/HeroBanner";
-import AboutOverview from "@/components/home/AboutOverview";
-import ServiceHighlights from "@/components/home/ServiceHighlights";
-import StatsCounter from "@/components/home/StatsCounter";
-import TeamSpotlight from "@/components/home/MessageFromCeo";
-import NewsPreview from "@/components/home/NewsPreview";
-import ClientLogos from "@/components/home/ClientLogos";
-import CTASection from "@/components/home/CTASection";
-import FAQSection from "@/components/home/FAQSection";
+import HeroBanner from "@/components/pages/home/HeroBanner";
+import AboutOverview from "@/components/pages/home/AboutOverview";
+import ServiceHighlights from "@/components/pages/home/ServiceHighlights";
+import StatsCounter from "@/components/pages/home/StatsCounter";
+import TeamSpotlight from "@/components/pages/home/MessageFromCeo";
+import NewsPreview from "@/components/pages/home/NewsPreview";
+import ClientLogos from "@/components/pages/home/ClientLogos";
+import CTASection from "@/components/pages/home/CTASection";
+import FAQSection from "@/components/pages/home/FAQSection";
 
 
 const Home = () => {

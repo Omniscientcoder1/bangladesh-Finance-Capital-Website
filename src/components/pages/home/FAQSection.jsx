@@ -27,7 +27,7 @@ const FAQSection = () => {
               <Typography variant="body2">{faq.answer}</Typography>
             </AccordionDetails>
           </Accordion>
-        ))}
+        ))} 
       </Container>
     </Box>
   );

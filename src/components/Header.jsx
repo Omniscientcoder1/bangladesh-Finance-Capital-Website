@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+import Link from "next/link";
 import styles from "../styles/components/header.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
@@ -18,11 +20,11 @@ const menuItems = [
   {
     label: "ABOUT US",
     subItems: [
-      { name: "OUR STORY", path: "/about" },
-      { name: "OUR TEAM", path: "/team" },
-      { name: "MISSION AND VISION", path: "/mission" },
-      { name: "BOARD OF DIRECTORS", path: "/directors" },
-      { name: "LEADERSHIP", path: "/leadership" },
+      { name: "OUR STORY", path: "/about/our-story" },
+      // { name: "OUR TEAM", path: "/team" },
+      { name: "MISSION AND VISION", path: "/about/mission" },
+      { name: "BOARD OF DIRECTORS", path: "/about/directors" },
+      { name: "LEADERSHIP", path: "/about/leadership" },
     ],
   },
   {
@@ -111,6 +113,8 @@ const Header = () => {
   const toggleDrawer = () => setMobileOpen(!mobileOpen);
 
   const handleSubMenuHover = (event) => {
+    if (typeof window === "undefined") return; // ✅ prevent SSR hydration error
+
     const rect = event.currentTarget.getBoundingClientRect();
     const viewportWidth = window.innerWidth;
     const submenu = event.currentTarget.querySelector(`.${styles.dropdownRight}`);
@@ -126,26 +130,32 @@ const Header = () => {
   return (
     <AppBar position="static" className={styles.appbar}>
       <Toolbar className={styles.toolbar}>
-        <a href="/" className={styles.logo}>
-          <img src="/images/logo_cropped.png" alt="Logo" />
-        </a>
+        <Link href="/" passHref legacyBehavior>
+          <a className={styles.logo}>
+            <img src="/images/logo_cropped.png" alt="Logo" />
+          </a>
+        </Link>
 
         {!isMobile && (
           <nav className={styles.desktopNav}>
             <ul className={styles.menu}>
               {menuItems.map((item) => (
                 <li key={item.label}>
-                  <a href="#">{item.label}</a>
+                  <span>{item.label}</span>
                   {item.subItems && (
                     <ul className={styles.dropdown}>
                       {item.subItems.map((sub) => (
                         <li key={sub.name} onMouseEnter={handleSubMenuHover}>
-                          <a href={sub.path}>{sub.name}</a>
+                          <Link href={sub.path} passHref legacyBehavior>
+                            <a>{sub.name}</a>
+                          </Link>
                           {sub.subItems && (
-                            <ul className={`${styles.dropdownRight}`}>
+                            <ul className={styles.dropdownRight}>
                               {sub.subItems.map((deep) => (
                                 <li key={deep.name}>
-                                  <a href={deep.path}>{deep.name}</a>
+                                  <Link href={deep.path} passHref legacyBehavior>
+                                    <a>{deep.name}</a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -172,19 +182,17 @@ const Header = () => {
                     <ListItem><strong>{item.label}</strong></ListItem>
                     {item.subItems?.map((sub) => (
                       <React.Fragment key={sub.name}>
-                        <ListItem button component="a" href={sub.path} onClick={toggleDrawer}>
-                          <ListItemText inset primary={sub.name} />
-                        </ListItem>
-                        {sub.subItems?.map((deep) => (
-                          <ListItem
-                            button
-                            component="a"
-                            href={deep.path}
-                            key={deep.name}
-                            onClick={toggleDrawer}
-                          >
-                            <ListItemText inset primary={`— ${deep.name}`} />
+                        <Link href={sub.path} passHref legacyBehavior>
+                          <ListItem button component="a" onClick={toggleDrawer}>
+                            <ListItemText inset primary={sub.name} />
                           </ListItem>
+                        </Link>
+                        {sub.subItems?.map((deep) => (
+                          <Link href={deep.path} passHref legacyBehavior key={deep.name}>
+                            <ListItem button component="a" onClick={toggleDrawer}>
+                              <ListItemText inset primary={`— ${deep.name}`} />
+                            </ListItem>
+                          </Link>
                         ))}
                       </React.Fragment>
                     ))}
