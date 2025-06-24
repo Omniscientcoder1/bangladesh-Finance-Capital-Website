@@ -35,18 +35,18 @@ const menuItems = [
         path: "/services/portfolio",
         subItems: [
           { name: "DISCRETIONARY", path: "/services/portfolio/discretionary" },
-          { name: "NON-DISCRETIONARY", path: "/services/portfolio/non-discretionary" },
+          { name: "BLUE-SIP", path: "/services/portfolio/blue-sip" },
         ],
       },
       {
         name: "INVESTMENT BANKING",
         path: "/services/banking",
         subItems: [
-          { name: "CORPORATE ADVISORY", path: "/services/banking/ipo" },
-          { name: "DEBT/EQUITY SOLUTIONS", path: "/services/banking/ma" },
-          { name: "PUBLIC/RIGHTS OFFERINGS", path: "/services/banking/ma" },
-          { name: "TRUSTEESHIP SERVICES", path: "/services/banking/ma" },
-          { name: "MERGER & ACQUISITION SERVICES", path: "/services/banking/ma" },
+          { name: "CORPORATE ADVISORY", path: "/services/banking/corporate-advisory" },
+          { name: "DEBT/EQUITY SOLUTIONS", path: "/services/banking/debt-equity" },
+          { name: "PUBLIC/RIGHTS OFFERINGS", path: "/services/banking/public-rights" },
+          { name: "TRUSTEESHIP SERVICES", path: "/services/banking/trusteeship" },
+          { name: "MERGER & ACQUISITION SERVICES", path: "/services/banking/merger-acquisition" },
         ],
       },
       

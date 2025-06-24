@@ -1,0 +1,10 @@
+const data = {
+  title: "Blue SIP",
+  description: [
+    "Blue SIP allows you to invest a fixed amount periodically in a professionally managed portfolio.",
+    "It helps build wealth over time through disciplined investment, rupee cost averaging, and the power of compounding."
+  ],
+  image: "/images/blue_sip.jpg"
+};
+
+export default data;

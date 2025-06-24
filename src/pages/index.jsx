@@ -24,7 +24,7 @@ const Home = () => {
       <StatsCounter />
       <TeamSpotlight />
       <NewsPreview />
-      <ClientLogos />
+      {/* <ClientLogos /> */}
       <CTASection />
       <FAQSection />
 
