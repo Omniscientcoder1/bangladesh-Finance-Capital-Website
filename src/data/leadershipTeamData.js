@@ -29,7 +29,7 @@ const leadershipTeamData = {
       title: "Head of Investment Banking, Bangladesh Finance Capital Limited",
       image: "/images/boardofdirectors/7.png",
       description: `
-        <p>Saymon Shahid Nishat is a skilled investment professional with expertise in portfolio management, equity research, and financial strategy. Prior to joining Bangladesh Finance Capital Limited as Portfolio Manager, he worked at Green Delta Dragon Asset Management, where he gained valuable experience in fund management and capital market operations. Saymon holds a bachelor’s degree in Finance and Marketing from North South University. His strategic insight and analytical capabilities make him a key contributor to delivering value-driven investment solutions.</p>
+        <p>Samiul Islam is a dedicated finance professional currently serving as the Head of Investment Banking at Bangladesh Finance Capital Limited. With a background in finance and ongoing experience as an Investment Banking Analyst and Research Analyst intern, he brings analytical rigor and a commitment to excellence to the firm. Samiul is passionate about developing innovative financial solutions that drive growth and value for clients in Bangladesh’s evolving capital markets.</p>
       `
     }
   ]
