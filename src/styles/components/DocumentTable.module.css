@@ -1,0 +1,29 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f3f7fb;
+  font-weight: bold;
+}
+
+.downloadBtn {
+  color: #0a66c2;
+  font-weight: 500;
+  text-decoration: underline;
+}

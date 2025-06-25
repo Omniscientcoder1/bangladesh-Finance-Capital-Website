@@ -55,9 +55,9 @@ const menuItems = [
   {
     label: "RESEARCH",
     subItems: [
-      { name: "WEEKLY UPDATE", path: "/research/reports" },
-      { name: "MONTHLY UPDATE", path: "/research/analysis" },
-      { name: "INDUSTRY UPDATE", path: "/research/analysis" },
+      { name: "WEEKLY UPDATE", path: "/research/weekly-update" },
+      { name: "MONTHLY UPDATE", path: "/research/monthly-update" },
+      { name: "INDUSTRY UPDATE", path: "/research/industry-update" },
     ],
   },
     {
