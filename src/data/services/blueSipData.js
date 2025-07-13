@@ -5,7 +5,7 @@ const data = {
     "It helps build wealth over time through disciplined investment, rupee cost averaging, and the power of compounding."
   ],
   image: "/images/services/blue-sip.jpg",
-  heroTitle: "Blue SIP (Systematic Investment Plan)",
+  heroTitle: "Blue SIP",
   heroSubtitle: "Disciplined investing for long-term financial goals.",
   heroImage: "/images/heros/blue-sip-banner.jpg"
 };

@@ -16,7 +16,7 @@ const HeroSection = ({ title, subtitle, image }) => {
       <Container>
         <Typography variant="h3" component="h1" gutterBottom>{title}</Typography>
         <Typography variant="h6">{subtitle}</Typography>
-      </Container>
+      </Container> 
     </Box>
   );
 };

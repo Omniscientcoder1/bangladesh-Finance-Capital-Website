@@ -7,7 +7,7 @@ const StatsCounter = () => {
     <Box component="section" sx={{ py: 8, backgroundColor: "#f9fafe" }}>
       <Container maxWidth="lg">
         <Typography
-          variant="h4"
+          variant="h4" 
           component="h2"
           align="center"
           gutterBottom
@@ -26,7 +26,7 @@ const StatsCounter = () => {
                   backgroundColor: "white",
                   borderRadius: 2,
                   boxShadow: 1,
-                  transition: "transform 0.3s ease",
+                  transition: "transform 0.3s ease", 
                   "&:hover": {
                     transform: "scale(1.05)",
                     boxShadow: 3,

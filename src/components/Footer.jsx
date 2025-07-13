@@ -29,10 +29,10 @@ const Footer = () => {
           <Stack spacing={1}>
             <Link href="/citizencharter" style={{ color: "#fff", textDecoration: "none" }}>Citizen Charter</Link>
             <Link href="/financial-literacy" style={{ color: "#fff", textDecoration: "none" }}>Financial Literacy</Link>
-            <Link href="/informationrights" style={{ color: "#fff", textDecoration: "none" }}>Information Rights</Link>
-            <Link href="/complaintcell" style={{ color: "#fff", textDecoration: "none" }}>Complaint Cell</Link>
-            <Link href="/privacypolicy" style={{ color: "#fff", textDecoration: "none" }}>Privacy Policy</Link>
-            <Link href="/NIS" style={{ color: "#fff", textDecoration: "none" }}>NIS</Link>
+            {/* <Link href="/informationrights" style={{ color: "#fff", textDecoration: "none" }}>Information Rights</Link> */}
+            {/* <Link href="/complaintcell" style={{ color: "#fff", textDecoration: "none" }}>Complaint Cell</Link> */}
+            {/* <Link href="/privacypolicy" style={{ color: "#fff", textDecoration: "none" }}>Privacy Policy</Link> */}
+            {/* <Link href="/NIS" style={{ color: "#fff", textDecoration: "none" }}>NIS</Link> */}
           </Stack>
         </Grid>
 
