@@ -23,7 +23,7 @@ const Home = () => {
       <ServiceHighlights />
       <StatsCounter />
       <TeamSpotlight />
-      <NewsPreview />
+      {/* <NewsPreview /> */}
       {/* <ClientLogos /> */}
       <CTASection />
       <FAQSection />

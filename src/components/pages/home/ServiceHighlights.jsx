@@ -59,7 +59,7 @@ const ServiceHighlights = () => {
                       objectFit: "cover"
                     }}
                   />
-                  <CardContent sx={{ flexGrow: 1 }}>
+                  <CardContent sx={{ flexGrow: 1 }}> 
                     <Typography gutterBottom variant="h6" component="div">
                       {service.title}
                     </Typography>

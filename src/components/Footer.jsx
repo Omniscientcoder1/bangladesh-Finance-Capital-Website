@@ -21,7 +21,7 @@ import Logo from "/public/images/logo_cropped.png";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#003366", color: "#fff", pt: 8, pb: 4, px: 2 }}>
+    <Box sx={{ backgroundColor: "#003366", color: "#fff", pt: 8, pb: 4, px: 2, mt: 4 }}>
       <Grid container spacing={4} justifyContent="space-between" maxWidth="lg" mx="auto">
         {/* Useful Links */}
         <Grid item xs={6} md={2}>
@@ -42,7 +42,7 @@ const Footer = () => {
           <Stack spacing={1}>
             <Link href="mailto:info@bd.finance" style={{ color: "#fff", textDecoration: "none" }}>info@bd.finance</Link>
             <Link href="/contact" style={{ color: "#fff", textDecoration: "none" }}>Contact</Link>
-            <Link href="/branch-contacts" style={{ color: "#fff", textDecoration: "none" }}>Branch Contact</Link>
+            {/* <Link href="/branch-contacts" style={{ color: "#fff", textDecoration: "none" }}>Branch Contact</Link> */}
             <Link href="/faqs" style={{ color: "#fff", textDecoration: "none" }}>FAQ</Link>
           </Stack>
         </Grid>

@@ -60,22 +60,22 @@ const menuItems = [
       { name: "INDUSTRY UPDATE", path: "/research/industry-update" },
     ],
   },
-    {
-    label: "NEWS",
-    subItems: [
-      { name: "NEWS & PR COVERAGE", path: "/research/reports" },
-      { name: "INTERVIEWS", path: "/research/analysis" },
-      { name: "MARKET INSIGHTS", path: "/research/analysis" },
-      { name: "THOUGHT LEADERSHIP", path: "/research/analysis" },
-      { name: "MEDIA", path: "/research/analysis" },
-      { name: "OUR ACHIEVEMENTS", path: "/research/analysis" },
-    ],
-  },
+  //   {
+  //   label: "NEWS",
+  //   subItems: [
+  //     { name: "NEWS & PR COVERAGE", path: "/research/reports" },
+  //     { name: "INTERVIEWS", path: "/research/analysis" },
+  //     { name: "MARKET INSIGHTS", path: "/research/analysis" },
+  //     { name: "THOUGHT LEADERSHIP", path: "/research/analysis" },
+  //     { name: "MEDIA", path: "/research/analysis" },
+  //     { name: "OUR ACHIEVEMENTS", path: "/research/analysis" },
+  //   ],
+  // },
   {
     label: "CAREER",
     subItems: [
-      { name: "CURRENT OPENINGS", path: "/research/reports" },
-      { name: "WHY WORK WITH US?", path: "/research/analysis" },
+      { name: "CURRENT OPENINGS", path: "/current-openings" },
+      // { name: "WHY WORK WITH US?", path: "/research/analysis" },
       // { name: "EMPLOYEE TESTIMONIALS", path: "/research/analysis" },
       // { name: "LIFE AT BFCL", path: "/research/analysis" },
     ],
@@ -85,7 +85,7 @@ const menuItems = [
     subItems: [
       // { name: "BRANCH LOCATIONS", path: "/research/reports" },
       { name: "CONTACT FORM", path: "/contact" },
-      { name: "CUSTOMER SERVICE", path: "/research/analysis" },
+      // { name: "CUSTOMER SERVICE", path: "/research/analysis" },
     ],
   },
       {
