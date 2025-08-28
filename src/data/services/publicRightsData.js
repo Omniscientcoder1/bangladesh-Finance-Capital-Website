@@ -7,7 +7,7 @@ const data = {
   image: "/images/services/ipo.jpg",
   heroTitle: "Public and Rights Offerings",
   heroSubtitle: "Expertly managed capital raises for public markets.",
-  heroImage: "/images/heros/public-rights-banner.jpg"
+  heroImage: "/images/capital_banner_images/public_rights_offering.jpg"
 };
 
 export default data;
